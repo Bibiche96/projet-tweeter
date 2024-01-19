@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
-export function Iconav(props) {
+export function Iconav({ active, imgnav, name,to }) {
     return (
         <>
-            <div className=" m-2 flex gap-2 ml-60 ">
-                <img src= {props.imgnav} className="w-8" alt="icon" />
-                <p className="text-white font-bold"> {props.name} </p>
+            <Link to={to}>
+            <div className={`m-2 flex ml-60 cursor-pointer p-4  gap-10 hover:bg-blue-300 transition ${active}`}  >
+                <img src={imgnav} className="w-8" alt="icon" />
+                <p className="text-white font-bold"> {name} </p>
+                
             </div>
+            </Link>
         </>
     )
 }

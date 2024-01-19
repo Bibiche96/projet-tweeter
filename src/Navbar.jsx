@@ -6,21 +6,21 @@ export function Navbar() {
     return (
 
         <>
-            <div className="w-1/5 flex flex-col gap-6  ml-100">
+            <div className="w-1/5 flex flex-col ml-100 ">
                 <div className="fixed">
 
-                    <Iconav imgnav="/src/assets/Icons/Twitter.svg" />
-                    <Iconav imgnav="/src/assets/Icons/Home-Fill.svg" name="Home" />
+                    <Iconav  active="bg-blue-300" imgnav="/src/assets/Icons/Twitter.svg" />
+                    <Iconav to="/"imgnav="/src/assets/Icons/Home-Fill.svg" name="Home" />
 
-                    <Iconav imgnav="/src/assets/Icons/Messages.svg" name="Messages" />
+                    <Iconav to="/Messages" imgnav="/src/assets/Icons/Messages.svg" name="Messages" />
 
-                    <Iconav imgnav="/src/assets/Icons/Bookmarks.svg" name="Bookmaks" />
+                    <Iconav  to="/Bookmaks"imgnav="/src/assets/Icons/Bookmarks.svg" name="Bookmaks" />
 
-                    <Iconav imgnav="/src/assets/Icons/Lists.svg" name="Lists" />
+                    <Iconav to="/Lists"imgnav="/src/assets/Icons/Lists.svg" name="Lists" />
 
-                    <Iconav imgnav="/src/assets/Icons/Profile.svg" name="Profile" />
+                    <Iconav to="/Profile" imgnav="/src/assets/Icons/Profile.svg" name="Profile" />
 
-                    <Iconav imgnav="/src/assets/Icons/More.svg" name="More" />
+                    <Iconav to="/More" imgnav="/src/assets/Icons/More.svg" name="More" />
                     <Btntweet />
                 </div>
 

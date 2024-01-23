@@ -6,7 +6,7 @@ import { Search } from "./Search";
 
 export function Searchtweet() {
     return (
-        <div className="w-1/5">
+        <div className="w-1/5 mr-20">
             <div className="fixed">
                 <div>
                     <Search />

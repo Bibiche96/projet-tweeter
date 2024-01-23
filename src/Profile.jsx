@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
+import { Userbio } from "./Userbio";
 
 
 
@@ -9,18 +10,20 @@ export function Profile() {
     return (
         <>
 
-        
-            <Header showBackArrow label="user profile" />
-            <div>
+            <div className="w-2/5 border border-gray-500">
+                <Header  label="user profile" />
+
 
                 <div className="bg-neutral-700 h-44 relative">
 
                     <div className="absolute-bottom-16 left-4">
-                        <img src="/src/assets/Icons/Profile-Fill.svg" alt="logo" />
-                        <h1 className="text-white">Bonjour</h1>
+                        <img src="/src/assets/Icons/Profile-Fill.svg" className=" w-60 rounded-full" alt="logo" />
+
 
                     </div>
                 </div>
+                <Userbio />
+
             </div>
         </>
     )

@@ -1,35 +1,42 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Icontweet } from "./Icontweet";
+import axios from "axios";
 
 
-export function Chaine({tweets}) {
-    let tab= {
-        "author_avatar": "https://picsum.photos/200?random=1604299903000",
-        "source": "Twitter",
-        "date": 1604299903000,
-        "favorites": "92746",
-        "id": "1323155810910982145",
-        "isVerified": true,
-        "replies": "24785",
-        "retweets": "16287",
-        "text": "...As I said at the debate – “Will you remember that Texas?Pennsylvania? Ohio? New Mexico?” I will always protect American Energy and American Jobs! Get out and VOTE #MAGA!"
+export function Chaine({ props }) {
+    const [user, setUser] = useState([]);
+    
+    useEffect(() => {
+        try {
+            axios.get("https://my-json-server.typicode.com/amare53/twiterdb/users/" + props.userId) 
+            .then((resp) => {
+               setUser(resp.data)
+            });
+        }
+        catch (err) {
+        return err;
     }
-    return (
-        <>
-            <div className="flex border border-gray-500 py-3 px-3 ">
-                <img src={tweets.author_avatar} className="w-20 mb-70 self-start" />
-                <div className="flex flex-col  ms-3  justify-center">
-                    <div className="flex gap-2">
-                        <p  className="text-white font-bold" > {tweets.source} </p>
-                        <img src="/src/assets/Icons/Verified.svg"/>
-                        <p className="text-gray-400"> {tweets.date} </p>
-                    </div>
-                    <p className="text-white"> {tweets.text} </p>
-                    <img src= {tweets.image} className=" h-60 max-w-full rounded-lg mt-8 object-content"/>
 
-                    <Icontweet/>
+ }, [])
+
+console.log(user);
+return (
+    <>
+        <div className="flex border border-gray-500 py-3 px-3 ">
+            <img src={user.thumbnailProfil} className="w-20 mb-70 self-start" />
+            <div className="flex flex-col  ms-3  justify-center">
+                <div className="flex gap-2">
+                    <p className="text-white font-bold" >{user.name}</p>
+                    <img src="/src/assets/Icons/Verified.svg" />
+                    <p className="text-gray-400">{user.email}</p>
                 </div>
+                <p className="text-white">{props.body}</p>
+                {props.url && <img src={props.url} className=" h-60 max-w-full rounded-lg mt-8 object-content" />}
+
+                <Icontweet />
             </div>
-        </>
-    )
+        </div>
+    </>
+)
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar } from "./Calendar";
+import { BsCalendar3 } from "react-icons/bs";
 
 export function Userbio() {
     return (
@@ -22,7 +22,7 @@ export function Userbio() {
 
             </div>
             <div className=" flex items-center gap-2 mt-4 text-neutral-500">
-                <Calendar size={8} />
+                <BsCalendar3 size={20} />
                 <p>joined january 2024</p>
             </div>
             <div className=" flex items-center mt-4 gap-6">

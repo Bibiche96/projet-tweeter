@@ -5,9 +5,9 @@ export function Iconav({ active, imgnav, name,to }) {
     return (
         <>
             <Link to={to}>
-            <div className={`m-2 flex ml-60 cursor-pointer p-2  gap-8 hover:bg-neutral-500 rounded-full transition ${active}`}  >
+            <div className={`m-2 flex ml-36 cursor-pointer p-2  gap-8 hover:bg-gray-900 rounded-full transition ${active}`}  >
                 <img src={imgnav} className="w-8" alt="icon" />
-                <p className="text-white font-bold size-16 pt-5"> {name} </p>
+                <p className="text-white font-semibold size-16  pt-5 hidden lg:block"> {name} </p>
                 
             </div>
             </Link>

@@ -33,8 +33,8 @@ export function Iconlove(props) {
                hover:text-red-500">
                
                 <LikeIcon color={state? 'red' : ''} size={20} />
-                {/* <img src={props.srclove} /> */}
-                <p className="text-gray-400">{value} </p>
+                
+                <p>{value} </p>
             </div>
         </>
     )

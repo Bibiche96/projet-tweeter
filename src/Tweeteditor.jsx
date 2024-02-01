@@ -1,5 +1,6 @@
 import React from 'react'
 import { Btntweet } from './Btntweet'
+
 export function Tweeteditor() {
     return (
         <>
@@ -10,12 +11,12 @@ export function Tweeteditor() {
                 </div>
 
                 <div className="flex flex-row justify-between ">
-                    <div className="flex flex-row gap-x-3.5 px-24">
-                        <img src="/src/assets/Icons/Media.svg" alt="icon" />
-                        <img src="/src/assets/Icons/Gif.svg" alt="icon" />
-                        <img src="/src/assets/Icons/Poll.svg" alt="icon" />
-                        <img src="/src/assets/Icons/Emoji.svg" alt="icon" />
-                        <img src="/src/assets/Icons/Schedule.svg" alt="icon" />
+                    <div className="flex flex-row gap-x-3.5 px-24 ">
+                        <img src="/src/assets/Icons/Media.svg" className='hover:bg-blue-900 rounded-full transition' alt="icon" />
+                        <img src="/src/assets/Icons/Gif.svg"className='hover:bg-blue-900 rounded-full transition' alt="icon" />
+                        <img src="/src/assets/Icons/Poll.svg"className='hover:bg-blue-900 rounded-full transition' alt="icon" />
+                        <img src="/src/assets/Icons/Emoji.svg"className='hover:bg-blue-900 rounded-full transition' alt="icon" />
+                        <img src="/src/assets/Icons/Schedule.svg"className='hover:bg-blue-900 rounded-full transition' alt="icon" />
                     </div>
                     <Btntweet/>
                 </div>
